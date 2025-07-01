@@ -42,6 +42,7 @@ import {
 import dayjs from "dayjs"; // Import dayjs
 import utc from "dayjs/plugin/utc"; // Import UTC plugin if you deal with UTC dates
 import timezone from "dayjs/plugin/timezone"; // Import timezone plugin for local time conversion
+import { Link } from "react-router-dom";
 
 dayjs.extend(utc); // Extend dayjs with utc plugin
 dayjs.extend(timezone); // Extend dayjs with timezone plugin
@@ -207,10 +208,12 @@ export default function MyEvents() {
           <p className="text-gray-600 mb-4">
             Start by creating your first event
           </p>
-          <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
-            <Plus className="mr-2 h-4 w-4" />
-            Create Event
-          </Button>
+          <Link to={"/add-event"}>
+            <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
+              <Plus className="mr-2 h-4 w-4" />
+              Create Event
+            </Button>
+          </Link>
         </div>
       ) : (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
