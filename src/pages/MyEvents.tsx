@@ -254,6 +254,7 @@ export default function MyEvents() {
                 <p className="text-gray-700 text-sm mb-4 line-clamp-3">
                   {event.description}
                 </p>
+                {/* sadsad */}
 
                 <div className="flex items-center justify-between mb-4">
                   <Badge
